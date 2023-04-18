@@ -1,6 +1,6 @@
 /* eslint-disable max-params */
-console.log('Sample JavaScript #4 HW #16');
 /* eslint-disable multiline-comment-style */
+console.log('Sample JavaScript #4 HW #16');
 
 /*
  * #1
@@ -98,12 +98,19 @@ console.log(getLocalDate(new Date(1999999123456), true, true) === '2033-05-18, 0
  * и выводит текущий день недели: "понедельник", "вторник", … "воскресенье".
  */
 
-let getWeekDay = (day) => {
-  const weekday = ['восресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-  const date = new Date(day);
+let getWeekDay = (d) => {
+  const date = new Date(d);
+  const days = [
+    'воскресенье',
+    'понедельник',
+    'вторник',
+    'среда',
+    'четверг',
+    'пятница',
+    'суббота'
+  ];
 
-
-  return weekday[date.getDay()];
+  return days[date.getDay()];
 };
 
 console.log(getWeekDay('2019-01-30')); // среда
